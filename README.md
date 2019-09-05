@@ -21,7 +21,7 @@ and assign it to `app.config`
 and work seamlessly with any database backend.
 
 Then, we can fill these tables using `db.session.add(<Object of table-class>)`
-The class can be used to query data as `User.query.all()` or 'User.query.filter_by(<condition>).all()'
+The class can be used to query data as `User.query.all()` or `User.query.filter_by(<condition>).all()`
 
 For security, passwords must be hashed using the `flask-bcrypt` library.
 `Bcrypt` objects have methods like `generate_password_hash` and `check_password_hash` that are useful.
