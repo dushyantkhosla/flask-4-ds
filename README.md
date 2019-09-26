@@ -1,4 +1,5 @@
 # flask-4-ds
+
 Using Flask to create a full-featured webapp for serving data products
 
 Two ways to run the flask app
@@ -27,3 +28,47 @@ For security, passwords must be hashed using the `flask-bcrypt` library.
 `Bcrypt` objects have methods like `generate_password_hash` and `check_password_hash` that are useful.
 
 Use `flask-login` to manage user sessions
+
+## Useful functions
+
+```python
+from flask import (
+    Flask,                  
+    render_template,
+    url_for,
+    flash,
+    redirect,
+    request
+)
+
+from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+
+from flask_login import (
+    LoginManager,
+    UserMixin,
+    login_user,
+    current_user,
+    logout_user,
+    login_required
+)
+
+from flask_wtf import FlaskForm
+
+from flask_wtf.file import FileField, FileAllowed
+
+from wtforms import (
+    StringField,
+    PasswordField,
+    SubmitField,
+    BooleanFielda
+)
+
+from wtforms.validators import (
+    DataRequired,
+    Length,
+    Email,
+    EqualTo,
+    ValidationError
+)
+```
